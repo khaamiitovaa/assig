@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+  <h1> All saved Blogs</h1>
+  <ul>
+    <% for (let i = 0; i < blogPosts.length; i++) { %>
+      <li>
+        <h2><%= blogPosts[i].title %></h2>
+        <p><%= blogPosts[i].content.substring(0, 100) %></p>
+        
+        <a href="/post/<%= blogPosts[i].id %>">Read More...</a>
+      </li>
+    <% } %>
+  </ul>
+  <a href="/new-post">Add New Blog </a>
+</body>
+</html>
